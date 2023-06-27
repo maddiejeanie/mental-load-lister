@@ -1,0 +1,144 @@
+:root {
+    --white: whitesmoke;
+    --blue: #CBF3F0;
+    --darkerblue: #2EC4B6;
+    --darkerorange: #FF9F1C;
+    --orange: #FFBF69;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--darkerblue);
+    color: var(--blue);
+    user-select: none;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: Shrikhand;
+    text-align: center;
+    color: var(--darkerorange);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+img {
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 100%;
+}
+
+#inputsubmit {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+    color: var(--white);
+    background-color: var(--darkerblue);
+    border: 1px solid var(--white);
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 3;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::placeholder { 
+  color: var(--blue);
+  opacity: 1; 
+}
+
+
+button {
+    color: var(--white);
+    background-color: var(--darkerorange);
+    font-weight: 500;
+    border: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+button:hover, ul li:hover {
+    cursor: pointer;
+    font-style: italic;
+    font-weight:bold;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+ul {
+    color: var(--darkerblue);
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+
+.tracking-in-expand-fwd {
+	-webkit-animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
