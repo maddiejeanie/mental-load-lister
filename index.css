@@ -19,7 +19,17 @@ html, body {
 h1 {
     font-family: Shrikhand;
     text-align: center;
-    color: var(--darkerorange);
+    color: var(--blue);
+}
+
+.stripes {
+  font-size: 1.5rem;
+  left: calc(50%);
+  position: absolute;
+  text-shadow: stripes();
+  top: -500px;
+  transform: scaleX(100) skewY(89deg);
+  z-index: 1;
 }
 
 .container {
@@ -141,4 +151,24 @@ ul li {
       opacity: 1;
     }
   }
+
+@function stripes() {
+  $shadows: ();
+  
+  @for $i from 0 through 1000 {
+    $color: '';
+    
+    @if($i % 2 == 0) {
+      $color: #000;
+    }
+    @else {
+      $color: #fff;
+    }
+    
+    $shadow: 0 #{$i * 3}px 0 $color;
+    $shadows: append($shadows, $shadow, comma);
+  }
+  
+  @return $shadows;
+
   
